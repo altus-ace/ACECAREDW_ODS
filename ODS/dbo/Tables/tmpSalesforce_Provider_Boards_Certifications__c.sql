@@ -1,0 +1,25 @@
+﻿CREATE TABLE [dbo].[tmpSalesforce_Provider_Boards_Certifications__c] (
+    [Id]                        VARCHAR (50)  NULL,
+    [OwnerId]                   VARCHAR (50)  NULL,
+    [IsDeleted]                 VARCHAR (50)  NULL,
+    [Name]                      VARCHAR (100) NULL,
+    [CreatedDate]               DATETIME      NULL,
+    [CreatedById]               VARCHAR (50)  NULL,
+    [LastModifiedDate]          DATETIME      NULL,
+    [LastModifiedById]          VARCHAR (50)  NULL,
+    [SystemModstamp]            VARCHAR (50)  NULL,
+    [LastActivityDate]          DATETIME      NULL,
+    [Provider_Name__c]          VARCHAR (100) NULL,
+    [Board__c]                  VARCHAR (150) NULL,
+    [Status__c]                 VARCHAR (100) NULL,
+    [Certification_Number__c]   VARCHAR (100) NULL,
+    [Certification_Date__c]     DATETIME      NULL,
+    [Expiration_Date__c]        DATETIME      NULL,
+    [ReCertification_Date__c]   DATETIME      NULL,
+    [ReVerfication_Date__c]     DATETIME      NULL,
+    [Lifetime_Certification__c] VARCHAR (50)  NULL,
+    [A_LAST_UPDATE_DATE]        DATETIME      DEFAULT (getdate()) NULL,
+    [A_LAST_UPDATE_BY]          VARCHAR (20)  DEFAULT ('PKG ImportTmp') NULL,
+    [A_LAST_UPDATE_FLAG]        VARCHAR (1)   DEFAULT ('Y') NULL
+);
+

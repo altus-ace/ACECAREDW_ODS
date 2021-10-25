@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [ALTUSACE\byu]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

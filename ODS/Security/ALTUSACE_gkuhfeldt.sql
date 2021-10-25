@@ -1,0 +1,2 @@
+﻿CREATE USER [ALTUSACE\gkuhfeldt] FOR LOGIN [ALTUSACE\gkuhfeldt];
+

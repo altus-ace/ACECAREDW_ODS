@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[R_Test] (
+    [MEMBER_ID]                                         INT           NULL,
+    [MEMBER_FIRST_NAME]                                 VARCHAR (255) NULL,
+    [MEMBER_MI]                                         VARCHAR (255) NULL,
+    [MEMBER_LAST_NAME]                                  VARCHAR (255) NULL,
+    [PLAN_ID]                                           VARCHAR (255) NULL,
+    [PRODUCT_CODE]                                      VARCHAR (255) NULL,
+    [SUBGRP_ID]                                         INT           NULL,
+    [SUBGRP_NAME]                                       VARCHAR (255) NULL,
+    [MEDICAID_ID]                                       INT           NULL,
+    [AGE]                                               INT           NULL,
+    [DATE_OF_BIRTH]                                     VARCHAR (255) NULL,
+    [MEMBER_HOME_ADDRESS]                               VARCHAR (255) NULL,
+    [MEMBER_HOME_ADDRESS2]                              VARCHAR (255) NULL,
+    [MEMBER_HOME_CITY]                                  VARCHAR (255) NULL,
+    [MEMBER_HOME_STATE]                                 VARCHAR (255) NULL,
+    [zip]                                               INT           NULL,
+    [AUTO_ASSIGN]                                       VARCHAR (255) NULL,
+    [BreastCancerScreeningDefault]                      INT           NULL,
+    [CervicalCancerScreeningMedicaidMarketplaceDefault] INT           NULL,
+    [city]                                              VARCHAR (255) NULL,
+    [state]                                             VARCHAR (255) NULL,
+    [latitude]                                          FLOAT (53)    NULL,
+    [longitude]                                         FLOAT (53)    NULL
+);
+

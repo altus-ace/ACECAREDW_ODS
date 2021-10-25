@@ -1,0 +1,2 @@
+﻿CREATE USER [ETL_User] FOR LOGIN [zz_ETL_User];
+

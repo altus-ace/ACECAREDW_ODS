@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[zz_ACE_EVENT_TABLE] (
+    [CLIENT_ID]        INT          NULL,
+    [CLIENT_NAME]      VARCHAR (30) NULL,
+    [LAST_INSERT_DATE] DATETIME     NULL,
+    [LAST_UPDATE_DATE] DATETIME     NULL
+);
+

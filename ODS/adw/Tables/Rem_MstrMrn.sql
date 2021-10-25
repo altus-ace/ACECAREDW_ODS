@@ -1,0 +1,27 @@
+﻿CREATE TABLE [adw].[Rem_MstrMrn] (
+    [MstrMrnKey]      NUMERIC (15)  NOT NULL,
+    [FirstName]       VARCHAR (100) NULL,
+    [LastName]        VARCHAR (100) NULL,
+    [MiddleName]      VARCHAR (100) NULL,
+    [DateOfBirth]     DATE          NULL,
+    [Gender]          CHAR (1)      NULL,
+    [MedicareID]      VARCHAR (15)  NULL,
+    [MedicaidID]      VARCHAR (15)  NULL,
+    [MbrSSN]          VARCHAR (9)   NULL,
+    [srcUrn]          VARCHAR (50)  NOT NULL,
+    [srcTableName]    VARCHAR (50)  NOT NULL,
+    [Active]          TINYINT       NOT NULL,
+    [MergeToMrn]      NUMERIC (15)  NOT NULL,
+    [LoadDate]        DATE          NOT NULL,
+    [DataDate]        DATE          NOT NULL,
+    [CreatedDate]     DATETIME2 (7) NOT NULL,
+    [CreatedBy]       VARCHAR (50)  NOT NULL,
+    [LastUpdatedDate] DATETIME2 (7) NOT NULL,
+    [LastUpdatedBy]   VARCHAR (50)  NOT NULL,
+    [RemDate]         DATETIME      DEFAULT (getdate()) NOT NULL,
+    [RemUser]         VARCHAR (25)  DEFAULT (suser_sname()) NOT NULL,
+    [RemReason]       VARCHAR (255) NOT NULL,
+    [RemKey]          INT           IDENTITY (1, 1) NOT NULL,
+    PRIMARY KEY CLUSTERED ([RemKey] ASC)
+);
+

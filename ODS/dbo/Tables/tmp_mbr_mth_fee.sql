@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[tmp_mbr_mth_fee] (
+    [subscriber_id] FLOAT (53) NULL,
+    [X20170101]     INT        NULL,
+    [X20170201]     INT        NULL,
+    [X20170301]     INT        NULL,
+    [X20170401]     INT        NULL,
+    [X20170501]     INT        NULL,
+    [X20170601]     INT        NULL,
+    [X20170701]     INT        NULL,
+    [X20170801]     INT        NULL,
+    [X20170901]     INT        NULL,
+    [X20171001]     INT        NULL,
+    [X20171101]     INT        NULL,
+    [X20171201]     INT        NULL,
+    [X20180101]     INT        NULL,
+    [X20180201]     INT        NULL,
+    [X20180301]     INT        NULL,
+    [X20180401]     INT        NULL,
+    [X20180501]     INT        NULL,
+    [X20180601]     INT        NULL,
+    [X20180701]     INT        NULL,
+    [X20180801]     INT        NULL,
+    [X20180901]     INT        NULL,
+    [cumm]          FLOAT (53) NULL
+);
+

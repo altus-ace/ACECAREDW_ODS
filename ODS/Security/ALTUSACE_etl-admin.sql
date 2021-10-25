@@ -1,0 +1,2 @@
+﻿CREATE USER [ALTUSACE\etl-admin] FOR LOGIN [ALTUSACE\etl-admin];
+

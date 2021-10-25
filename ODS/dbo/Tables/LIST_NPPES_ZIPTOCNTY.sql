@@ -1,0 +1,7 @@
+﻿CREATE TABLE [dbo].[LIST_NPPES_ZIPTOCNTY] (
+    [ZIP]        VARCHAR (50)  NULL,
+    [CITY]       VARCHAR (50)  NULL,
+    [STATE]      VARCHAR (50)  NULL,
+    [COUNTYNAME] VARCHAR (500) NULL
+);
+

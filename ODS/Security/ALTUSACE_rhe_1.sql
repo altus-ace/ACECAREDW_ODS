@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [ALTUSACE\rhe]
+    FROM WINDOWS WITH DEFAULT_LANGUAGE = [us_english];
+

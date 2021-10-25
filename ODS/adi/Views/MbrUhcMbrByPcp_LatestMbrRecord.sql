@@ -1,0 +1,43 @@
+﻿
+CREATE VIEW adi.MbrUhcMbrByPcp_LatestMbrRecord
+AS 
+-- Gets the latest record for each distinct SubscriberID
+-- TO get active Members filter to the max loadDate
+-- to get the full latest members of all time just execute view.
+
+SELECT src.mbrMbrByPcpKey, src.mbrFName, src.mbrMName, src.mbrLName, src.UHC_SUBSCRIBER_ID, src.CLASS, 
+    src.PLAN_ID, src.PRODUCT_CODE, src.SUBGRP_ID, src.SUBGRP_NAME, src.MEDICARE_ID, src.MEDICAID_ID, 
+    src.AGE, src.DATE_OF_BIRTH, src.GENDER, src.RELATIONSHIP_CODE, src.LANG_CODE, 
+    src.MEMBER_HOME_ADDRESS, src.MEMBER_HOME_ADDRESS2, src.MEMBER_HOME_CITY, src.MEMBER_HOME_STATE, src.MEMBER_HOME_ZIP, src.MEMBER_HOME_PHONE, 
+    src.MEMBER_MAIL_ADDRESS, src.MEMBER_MAIL_ADDRESS2, src.MEMBER_MAIL_CITY, src.MEMBER_MAIL_STATE, src.MEMBER_MAIL_ZIP, src.MEMBER_MAIL_PHONE, 
+    src.MEMBER_COUNTY_CODE, src.MEMBER_COUNTY, src.MEMBER_BUS_PHONE, src.DUAL_COV_FLAG, 
+    src.MEMBER_ORG_EFF_DATE, src.MEMBER_CONT_EFF_DATE, src.MEMBER_CUR_EFF_DATE, src.MEMBER_CUR_TERM_DATE, src.CLASS_PLAN_ID, 
+    src.RESP_LAST_NAME, src.RESP_FIRST_NAME, src.RESP_ADDRESS, src.RESP_ADDRESS2, src.RESP_CITY, src.RESP_STATE, src.RESP_ZIP, src.RESP_PHONE, 
+    src.BROKER_ID, src.PCP_UHC_ID, src.PCP_FIRST_NAME, src.PCP_LAST_NAME, src.PCP_MPIN, src.PCP_NPI, src.PCP_PROV_TYPE_ID, src.PCP_PROV_TYPE, 
+    src.PCP_INDICATOR, src.CMG, src.PCP_PHONE, src.PCP_FAX, src.PCP_ADDRESS, src.PCP_ADDRESS2, src.PCP_CITY, src.PCP_STATE, src.PCP_ZIP, src.PCP_COUNTY, 
+    src.PCP_EFFECTIVE_DATE, src.PCP_TERM_DATE, src.PCP_PRACTICE_TIN, src.PCP_GROUP_ID, src.PCP_PRACTICE_NAME, src.IND_PRACT_ID, src.IND_PRACT_NAME, src.RECERT_DATE, 
+    src.ETHNICITY, src.ETHNICITY_DESC, src.AUTO_ASSIGN, src.ASAP_ID, src.FEW_ID, src.LST_HRA_DATE, src.NXT_HRA_DATE, src.HRA_ID, src.MEMBER_EMail, 
+    src.PCP_Specialty_Code, src.PCP_Specialty, 
+    src.SourceFileName, src.InQuarantine, src.LoadType, src.LoadDate, src.DataDate, 
+    src.CreateDate, src.CreateBy, src.LastUpdatedDate, src.LastUpdatedBy
+FROM
+(
+    SELECT m.mbrMbrByPcpKey, m.mbrFName, m.mbrMName, m.mbrLName, m.UHC_SUBSCRIBER_ID, m.CLASS, 
+	   m.PLAN_ID, m.PRODUCT_CODE, m.SUBGRP_ID, m.SUBGRP_NAME, m.MEDICARE_ID, m.MEDICAID_ID, 
+	   m.AGE, m.DATE_OF_BIRTH, m.GENDER, m.RELATIONSHIP_CODE, m.LANG_CODE, 
+	   m.MEMBER_HOME_ADDRESS, m.MEMBER_HOME_ADDRESS2, m.MEMBER_HOME_CITY, m.MEMBER_HOME_STATE, m.MEMBER_HOME_ZIP, m.MEMBER_HOME_PHONE, 
+	   m.MEMBER_MAIL_ADDRESS, m.MEMBER_MAIL_ADDRESS2, m.MEMBER_MAIL_CITY, m.MEMBER_MAIL_STATE, m.MEMBER_MAIL_ZIP, m.MEMBER_MAIL_PHONE, 
+	   m.MEMBER_COUNTY_CODE, m.MEMBER_COUNTY, m.MEMBER_BUS_PHONE, m.DUAL_COV_FLAG, 
+	   m.MEMBER_ORG_EFF_DATE, m.MEMBER_CONT_EFF_DATE, m.MEMBER_CUR_EFF_DATE, m.MEMBER_CUR_TERM_DATE, m.CLASS_PLAN_ID, 
+	   m.RESP_LAST_NAME, m.RESP_FIRST_NAME, m.RESP_ADDRESS, m.RESP_ADDRESS2, m.RESP_CITY, m.RESP_STATE, m.RESP_ZIP, m.RESP_PHONE, 
+	   m.BROKER_ID, m.PCP_UHC_ID, m.PCP_FIRST_NAME, m.PCP_LAST_NAME, m.PCP_MPIN, m.PCP_NPI, m.PCP_PROV_TYPE_ID, m.PCP_PROV_TYPE, 
+	   m.PCP_INDICATOR, m.CMG, m.PCP_PHONE, m.PCP_FAX, m.PCP_ADDRESS, m.PCP_ADDRESS2, m.PCP_CITY, m.PCP_STATE, m.PCP_ZIP, m.PCP_COUNTY, 
+	   m.PCP_EFFECTIVE_DATE, m.PCP_TERM_DATE, m.PCP_PRACTICE_TIN, m.PCP_GROUP_ID, m.PCP_PRACTICE_NAME, m.IND_PRACT_ID, m.IND_PRACT_NAME, m.RECERT_DATE, 
+	   m.ETHNICITY, m.ETHNICITY_DESC, m.AUTO_ASSIGN, m.ASAP_ID, m.FEW_ID, m.LST_HRA_DATE, m.NXT_HRA_DATE, m.HRA_ID, m.MEMBER_EMail, 
+	   m.PCP_Specialty_Code, m.PCP_Specialty, 
+	   m.SourceFileName, m.InQuarantine, m.LoadType, m.LoadDate, m.DataDate, 
+	   m.CreateDate, m.CreateBy, m.LastUpdatedDate, m.LastUpdatedBy, 
+	   ROW_NUMBER() OVER(PARTITION BY m.UHC_SUBSCRIBER_ID ORDER BY m.LoadDate DESC) arn
+    FROM adi.MbrUhcMbrByPcp m
+) src
+WHERE src.arn = 1;

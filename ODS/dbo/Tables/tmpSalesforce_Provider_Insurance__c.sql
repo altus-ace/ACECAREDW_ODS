@@ -1,0 +1,28 @@
+﻿CREATE TABLE [dbo].[tmpSalesforce_Provider_Insurance__c] (
+    [Id]                         VARCHAR (50)  NULL,
+    [OwnerId]                    VARCHAR (50)  NULL,
+    [IsDeleted]                  VARCHAR (50)  NULL,
+    [Name]                       VARCHAR (100) NULL,
+    [CreatedDate]                DATETIME      NULL,
+    [CreatedById]                VARCHAR (50)  NULL,
+    [LastModifiedDate]           DATETIME      NULL,
+    [LastModifiedById]           VARCHAR (50)  NULL,
+    [SystemModstamp]             VARCHAR (50)  NULL,
+    [LastActivityDate]           DATETIME      NULL,
+    [Provider_Name__c]           VARCHAR (100) NULL,
+    [Active_Insurance__c]        VARCHAR (50)  NULL,
+    [Insurance_Name__c]          VARCHAR (100) NULL,
+    [City__c]                    VARCHAR (100) NULL,
+    [State__c]                   VARCHAR (100) NULL,
+    [Zipcode__c]                 VARCHAR (50)  NULL,
+    [Policy_Number__c]           VARCHAR (50)  NULL,
+    [Coverage_Effective_Date__c] DATETIME      NULL,
+    [Coverage_End_Date__c]       DATETIME      NULL,
+    [Coverage_Type__c]           VARCHAR (50)  NULL,
+    [Per_Claim_Amount__c]        VARCHAR (50)  NULL,
+    [Aggregate_Amount__c]        VARCHAR (50)  NULL,
+    [A_LAST_UPDATE_DATE]         DATETIME      DEFAULT (getdate()) NULL,
+    [A_LAST_UPDATE_BY]           VARCHAR (20)  DEFAULT ('PKG ImportTmp') NULL,
+    [A_LAST_UPDATE_FLAG]         VARCHAR (1)   DEFAULT ('Y') NULL
+);
+

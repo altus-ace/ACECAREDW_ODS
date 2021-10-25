@@ -1,0 +1,17 @@
+﻿CREATE TABLE [dbo].[LIST_ACE_MEASURE] (
+    [M_ID]               VARCHAR (10) NOT NULL,
+    [CLIENT_ID]          VARCHAR (10) NULL,
+    [MEASURE_DESC]       VARCHAR (75) NULL,
+    [MEASURE_ID]         VARCHAR (10) NULL,
+    [PROGRAM_ID]         VARCHAR (50) NULL,
+    [ALT1_ID]            VARCHAR (50) NULL,
+    [ALT2_ID]            VARCHAR (50) NULL,
+    [ALT3_ID]            VARCHAR (50) NULL,
+    [ALT4_ID]            VARCHAR (50) NULL,
+    [ALT5_ID]            VARCHAR (50) NULL,
+    [A_LAST_UPDATE_DATE] DATETIME     DEFAULT (getdate()) NULL,
+    [A_LAST_UPDATE_BY]   VARCHAR (50) DEFAULT ('PKG Import') NULL,
+    [A_LAST_UPDATE_FLAG] VARCHAR (1)  DEFAULT ('Y') NULL,
+    PRIMARY KEY CLUSTERED ([M_ID] ASC)
+);
+

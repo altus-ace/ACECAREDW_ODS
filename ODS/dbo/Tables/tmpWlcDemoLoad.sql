@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[tmpWlcDemoLoad] (
+    [WlcSubscriberId]   VARCHAR (50)  NULL,
+    [mbrWlcMbrByPcpKey] INT           NULL,
+    [mbrLoadHistoryKey] INT           NULL,
+    [mbrMemberKey]      INT           NULL,
+    [mbrDemographicKey] INT           NULL,
+    [loadType]          CHAR (1)      NULL,
+    [adiLName]          VARCHAR (100) NULL,
+    [adiFName]          VARCHAR (100) NULL,
+    [adiMName]          VARCHAR (100) NULL,
+    [adiGender]         CHAR (5)      NULL,
+    [adiDob]            DATE          NULL,
+    [adiMedicaidID]     VARCHAR (15)  NULL,
+    [adiMedicareId]     VARCHAR (15)  NULL,
+    [adiDataDate]       DATE          NULL,
+    [adiLoadDate]       DATE          NULL,
+    [mdLName]           VARCHAR (100) NULL,
+    [mdFName]           VARCHAR (100) NULL,
+    [mdMName]           VARCHAR (100) NULL,
+    [mdGender]          CHAR (5)      NULL,
+    [mdDob]             DATE          NULL,
+    [mdMedicaidID]      VARCHAR (15)  NULL,
+    [mdMedicareID]      VARCHAR (15)  NULL,
+    [EffectiveDate]     DATE          NULL
+);
+

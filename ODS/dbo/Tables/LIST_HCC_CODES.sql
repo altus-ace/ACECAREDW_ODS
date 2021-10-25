@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[LIST_HCC_CODES] (
+    [URN]                INT           IDENTITY (1, 1) NOT NULL,
+    [HCCVersion]         VARCHAR (10)  NULL,
+    [HCC]                VARCHAR (10)  NULL,
+    [HCC_DESCRIPTION]    VARCHAR (200) NULL,
+    [A_LAST_UPDATE_DATE] DATETIME      DEFAULT (getdate()) NULL,
+    [A_LAST_UPDATE_BY]   VARCHAR (50)  DEFAULT ('PKG Import') NULL,
+    [A_LAST_UPDATE_FLAG] VARCHAR (1)   DEFAULT ('Y') NULL,
+    PRIMARY KEY CLUSTERED ([URN] ASC)
+);
+

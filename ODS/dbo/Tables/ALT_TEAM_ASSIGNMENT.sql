@@ -1,0 +1,11 @@
+﻿CREATE TABLE [dbo].[ALT_TEAM_ASSIGNMENT] (
+    [URN]                INT          IDENTITY (1, 1) NOT NULL,
+    [RISK_CATEGORY]      NCHAR (10)   NULL,
+    [POD]                NCHAR (10)   NULL,
+    [USER]               NCHAR (30)   NULL,
+    [A_LAST_UPDATE_DATE] DATETIME     DEFAULT (getdate()) NULL,
+    [A_LAST_UPDATE_BY]   VARCHAR (20) DEFAULT ('PKG Import_Tmp') NULL,
+    [A_LAST_UPDATE_FLAG] VARCHAR (1)  DEFAULT ('Y') NULL,
+    CONSTRAINT [PK_A_TEAM_ASSIGNMENT] PRIMARY KEY CLUSTERED ([URN] ASC)
+);
+

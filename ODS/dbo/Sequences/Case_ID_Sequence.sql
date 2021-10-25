@@ -1,0 +1,7 @@
+﻿CREATE SEQUENCE [dbo].[Case_ID_Sequence]
+    AS INT
+    START WITH 30000
+    INCREMENT BY 1
+    MINVALUE 1
+    MAXVALUE 999999999;
+

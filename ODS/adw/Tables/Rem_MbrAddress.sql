@@ -1,0 +1,26 @@
+﻿CREATE TABLE [adw].[Rem_MbrAddress] (
+    [mbrAddressKey]   INT           NOT NULL,
+    [MbrMemberKey]    INT           NOT NULL,
+    [MbrLoadKey]      INT           NOT NULL,
+    [EffectiveDate]   DATE          NOT NULL,
+    [ExpirationDate]  DATE          NOT NULL,
+    [AddressTypeKey]  INT           NOT NULL,
+    [Address1]        VARCHAR (100) NULL,
+    [Address2]        VARCHAR (100) NULL,
+    [CITY]            VARCHAR (65)  NULL,
+    [STATE]           CHAR (25)     NULL,
+    [ZIP]             VARCHAR (20)  NULL,
+    [COUNTY]          VARCHAR (65)  NULL,
+    [LoadDate]        DATE          NOT NULL,
+    [DataDate]        DATE          NOT NULL,
+    [CreatedDate]     DATETIME2 (7) NOT NULL,
+    [CreatedBy]       VARCHAR (50)  NOT NULL,
+    [LastUpdatedDate] DATETIME2 (7) NOT NULL,
+    [LastUpdatedBy]   VARCHAR (50)  NOT NULL,
+    [RemDate]         DATETIME      DEFAULT (getdate()) NOT NULL,
+    [RemUser]         VARCHAR (25)  DEFAULT (suser_sname()) NOT NULL,
+    [RemReason]       VARCHAR (255) NOT NULL,
+    [RemKey]          INT           IDENTITY (1, 1) NOT NULL,
+    PRIMARY KEY CLUSTERED ([RemKey] ASC)
+);
+

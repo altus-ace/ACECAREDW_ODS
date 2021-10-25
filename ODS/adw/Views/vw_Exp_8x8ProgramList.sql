@@ -1,0 +1,37 @@
+﻿
+
+CREATE VIEW [adw].[vw_Exp_8x8ProgramList]
+AS																							 
+    SELECT ExpRow.MembersIDNumber, 
+           ExpRow.CustomersFirst_name, 
+           ExpRow.CustomersLast_name, 
+           ExpRow.CustomersEmail, 
+           concat(1,ExpRow.CustomersAlternative) as CustomersAlternative, 
+           concat(1,ExpRow.CustomersVoice) as CustomersVoice, 
+           ExpRow.DateOfBirth, 
+           ExpRow.PrimaryAddress, 
+           ExpRow.MemberHomeCity, 
+           ExpRow.MemberHomeState, 
+           ExpRow.MEMBERHOMEZIP, 
+           ExpRow.SecondaryAddress, 
+           ExpRow.SecondaryCity, 
+           ExpRow.ScondaryState, 
+           ExpRow.SecondaryZip, 
+           ExpRow.gender, 
+           ExpRow.PCPName, 
+           concat(1,ExpRow.PCPPhone) as PCPPhone, 
+           ExpRow.MCO, 
+           ExpRow.MCOEffectiveDate, 
+           ExpRow.MCOProduct, 
+           ExpRow.LineOfBusiness, 
+           ExpRow.HEDISGap, 
+           ExpRow.HedisDateRange, 
+           ExpRow.HEDISStatus, 
+           ExpRow.Age, 
+           ExpRow.Language, 
+           ExpRow.Comments, 
+           ExpRow.AppointmentDate, 
+           ExpRow.CaregiverName, 
+           ExpRow.PatientidentifiedHighRisk, 
+           ExpRow.Rank
+    FROM Acdw_CLMS_SHCN_MSSP.[adw].[vw_Exp_8x8ProgramList] ExpRow;

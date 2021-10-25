@@ -1,0 +1,3 @@
+﻿CREATE LOGIN [ACDW_ETL_Reader]
+    WITH PASSWORD = N'Mtmmoobe!|s1kx,zjx|spiv@msFT7_&#$!~<wk{0prh|h{zq', SID = 0x568E02BACA37344685988745E101FA21, DEFAULT_LANGUAGE = [us_english], CHECK_POLICY = OFF;
+
